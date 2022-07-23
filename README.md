@@ -2,7 +2,7 @@
 
 pybind_dt64 is a single header include that allows casting datetime types between C++ and Python when using Pybind11. Specifically, it defines the conversions `std::chrono::time_point <---> np.datetime64` and `std::chrono::duration <---> np.timedelta64`.
 
-By default, Pybind11 allows you to cast between `std::chrono::time_point <---> np.datetime64` and `std::chrono::duration <---> np.timedelta64` when including the `<pybind11/chrono.h` header. pybind_dt64 allows you to use the corresponding Numpy types, rather than those in the Pytbon datetime library. This can be useful if you require more precision than the microsecond precision of datetime.
+By default, Pybind11 allows you to cast between `std::chrono::time_point <---> datetime.datetime` and `std::chrono::duration <---> datetime.timedelta` when including the `<pybind11/chrono.h` header. pybind_dt64 allows you to use the corresponding Numpy types, rather than those in the Pytbon datetime library. This can be useful if you require more precision than the microsecond precision of datetime.
 
 ## Example
 
